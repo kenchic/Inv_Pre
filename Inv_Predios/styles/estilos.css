@@ -1,17 +1,10 @@
-html
-{
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-body
-{ 
-	font-family: sans-serif, Arial, Segoe UI;
+html{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+body{ font-family: sans-serif, Arial, Segoe UI;
 	font-size: 16px;
 	background: #888 url("../styles/images/fondo.png");
 	margin: 0;
 	padding: 0;
 }
-
 .header
 {
 	color: #639ecd;
@@ -22,32 +15,27 @@ body
 	display: block;
 	width: 100%;
 }
-
 .img {
-        background-image:url(../styles/images/icenium2x.png);
-        background-repeat:no-repeat;
-        background-size:100%;
-    }
+    text-align:center;
+    width:auto;
+    height:100%;
+    margin:0px auto;
+}
 
-
-.combo {
-    padding:3px;
-    margin: 0;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
-    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    background: #f8f8f8;
-    color:#888;
-    border:none;
-    outline:none;
-    display: inline-block;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-    cursor:pointer;
+select
+{
+	appearance: none;
+	background: #f8f8f8;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+	color: #888;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;	
+	outline: none;
+	padding: 3px;
+    width: 200px;
 }
 
 h1
@@ -66,7 +54,7 @@ h1
 	text-align: center;
 }
 
-.button
+button
 {
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-radius: 5px;
@@ -78,6 +66,14 @@ h1
 	text-shadow: #7B7D82 1px 1px 1px;
 	width: 75px;
 }
+
+/*sobre-escribir kendo ui css*/
+.km-android,.km-android .km-content
+{
+    background: #888 url("../styles/images/fondo.png");   
+}
+/*sobre-escribir kendo ui css*/
+
 
 .button:active
 {
@@ -104,7 +100,7 @@ h1
 	}
 }
 
-.inputBox
+input
 {
 	background-color: #EFEFEF;
 	font-style: italic;
@@ -267,13 +263,14 @@ h1
 
 .tabla {
     display: table;
-    width: 100%;
+    width: auto;
     overflow:hidden;
     border-collapse: collapse;
+    height: 300px;
 }
 .fila {
     display: table-row;
-    text-align: left;
+    text-align: left;    
     width: 100%;
 }
 .celdaIzq {
@@ -285,8 +282,9 @@ h1
 }
 .celdaDer {
     display: table-cell;
-    width: 69%;
+    width: 49%;
     
     font-family: Segoe UI;
 	font-size: 10pt;
+    text-align:center;
 }

@@ -19,10 +19,10 @@
              data-role="view"  
              data-title="Inicio">
 
-            <div class="view-content">
-                <h1>Bienvenido!</h1>               
-                <p>Información de la Aplicaciones.</p>
-                <div class="img"></div>
+            <div class="view-content">                                          
+                <div class="img">
+                    <img style='width:100%; height:auto;' src="styles/images/logo.png" />
+                </div>
             </div>
         </div>
 
@@ -31,29 +31,25 @@
              data-role="view"  
              data-title="Regsitrar Información">
 
-            <div >
+            <div class="view-content" >
                 <div class="tabla">
                     <div class="fila">
-                        <div class ="celdaIzq">
-                            <div>
-                                <select id="comuna" class="combo">
-                                    <option value="Comuna A"> Comuna A </option>
-                                    <option value="Comuna B"> Comuna B </option>
-                                    <option value="Comuna C"> Comuna C </option>
-                                    <option value="Comuna D"> Comuna D </option>
-                                </select>
-                            </div>
-                            <div>
-                                <select id="barrio" class="combo">
-                                    <option value="Barrio A"> Barrio A </option>
-                                    <option value="Barrio B"> Barrio B </option>
-                                    <option value="Barrio C"> Barrio C </option>
-                                    <option value="Barrio D"> Barrio D </option>
-                                </select>
-                            </div>
-                            <input class="inputBox" type="text" id="direccion" placeholder="Dirección" />
-                            <input class="inputBox" type="text" id="distancia" placeholder="Distancia" />  
-                            <input class="inputBox" type="text" id="coordinador" placeholder="Coordinador" />  
+                        <div class ="celdaIzq">                            
+                            <select id="comuna" class="combo">
+                                <option value="Comuna A"> Comuna A </option>
+                                <option value="Comuna B"> Comuna B </option>
+                                <option value="Comuna C"> Comuna C </option>
+                                <option value="Comuna D"> Comuna D </option>
+                            </select>                        
+                            <select id="barrio" class="combo">
+                                <option value="Barrio A"> Barrio A </option>
+                                <option value="Barrio B"> Barrio B </option>
+                                <option value="Barrio C"> Barrio C </option>
+                                <option value="Barrio D"> Barrio D </option>
+                            </select>                            
+                            <input type="text" id="direccion" placeholder="Dirección" />
+                            <input type="text" id="distancia" placeholder="Distancia" />  
+                            <input type="text" id="coordinador" placeholder="Coordinador" />  
                             <button class="button" id="addButton" onclick="addTodo(); return false;">Guardar</button>    			
                         </div>
                         <div class="celdaDer">
