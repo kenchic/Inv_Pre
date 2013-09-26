@@ -4,13 +4,19 @@
         <title></title>
         <meta charset="utf-8" />
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-
+        
+        
+        <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/Sqlite.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/Geo.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/Camara.js"></script>
+        
         <script src="cordova.js"></script>
         <script src="kendo/js/jquery.min.js"></script>
         <script src="kendo/js/kendo.mobile.min.js"></script>
-        <script src="js/app.js"></script>
         
         <link href="styles/estilos.css" rel="stylesheet" />
+        <link href="styles/botones.css" rel="stylesheet" />
         
     </head>
     <body>
@@ -27,37 +33,48 @@
         </div>
 
         <!--Login-->
-        <div id="tabstrip-login" 
-             data-role="view"  
-             data-title="Regsitrar Información">
-
+        <div id="tabstrip-login" data-role="view" data-title="Regsitrar Información">
             <div class="view-content" >
                 <div class="tabla">
                     <div class="fila">
-                        <div class ="celdaIzq">    
-                           
-                            <select id="comuna" class="combo">
-                                <option value="Comuna A"> Comuna A </option>
-                                <option value="Comuna B"> Comuna B </option>
-                                <option value="Comuna C"> Comuna C </option>
-                                <option value="Comuna D"> Comuna D </option>
-                            </select><br/>
-                            <select id="barrio" class="combo">
-                                <option value="Barrio A"> Barrio A </option>
-                                <option value="Barrio B"> Barrio B </option>
-                                <option value="Barrio C"> Barrio C </option>
-                                <option value="Barrio D"> Barrio D </option>
-                            </select>                            
-                            <input type="text" id="direccion" placeholder="Dirección" />
-                            <input type="text" id="distancia" placeholder="Distancia" />  
-                            <input type="text" id="coordinador" placeholder="Coordinador" />  
-                            
-                            <button class="button" id="addButton" onclick="addTodo(); return false;">Guardar</button>    			
-                        </div>
-                        <div class="celdaDer">
-                            <button class="button" id="capturePhotoButton">Foto</button>
-                    		<img style="display:none;margin:0 auto; width:120px; height:120px;" id="smallImage" />   
-                        </div>
+                        <div class ="celdaIzq">                               
+                            <div style="height:40px;">
+                                <label>
+                                    <select id="comuna" >
+                                        <option value="Comuna A"> Comuna A </option>
+                                        <option value="Comuna B"> Comuna B </option>
+                                        <option value="Comuna C"> Comuna C </option>
+                                        <option value="Comuna D"> Comuna D </option>
+                                    </select>
+                                </label>​
+                            </div>
+                            <div style="height:40px;">
+                                <label>
+                                    <select id="barrio">
+                                        <option value="Barrio A"> Barrio A </option>
+                                        <option value="Barrio B"> Barrio B </option>
+                                        <option value="Barrio C"> Barrio C </option>
+                                        <option value="Barrio D"> Barrio D </option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div style="height:40px;">
+                                <input class="checkout-input" type="text" id="direccion" placeholder="Dirección"/>
+                            </div>
+                            <div style="height:55px;">
+                                <input type="text" id="distancia" placeholder="Distancia" />  
+                            </div>
+                            <div style="height:55px;">
+                                <input type="text" id="coordinador" placeholder="Coordinador" />  
+                            </div>                            
+                            <div style="height:55px; width:100%;">
+                                <p><a class="a_demo_three" id="addButton" onclick="addTodo(); return false;">Guardar Registro</a> </p>
+                            </div>
+                        </div>                        
+                        <div class="celdaDer">                            
+                            <p><a class="a_demo_three" id="capturePhotoButton">Tomar Foto</a> </p>
+                            <img style="display:none;margin:0 auto; width:120px; height:120px;" id="smallImage" />                               
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -92,8 +109,7 @@
             </div>
         </div>
 		
-        <script type="text/javascript" charset="utf-8" src="js/Sqlite.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/Geo.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/Camara.js"></script>
+        
+        
     </body>
 </html>

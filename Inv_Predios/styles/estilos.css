@@ -1,3 +1,4 @@
+/*componentes en la pagina*/
 html{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
 body{ font-family: sans-serif, Arial, Segoe UI;
 	font-size: 16px;
@@ -21,9 +22,11 @@ body{ font-family: sans-serif, Arial, Segoe UI;
     height:100%;
     margin:0px auto;
 }
+
+/*INPUT*/
 input
 {
-	background-color: #EFEFEF;
+	background-color: #f8f8f8;
 	font-style: italic;
 	color: #A7A7A7;
 	min-width: 180px;
@@ -39,22 +42,32 @@ input
     width: 100%;
 }
 
-select
-{
-	appearance: none;
-	background: #f8f8f8;
-	border: none;
-	border-radius: 4px;
-	box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-	color: #888;
-	cursor: pointer;
-	display: inline-block;
-	margin: 0;	
-	outline: none;
-	padding: 3px;
-    width: 105%;    
-    height:50px;
+.checkout-input {
+  float: left;
+  padding: 0 7px;
+  height: 32px;
+  color: #525864;
+  background: white;
+  border: 1px solid;
+  border-color: #b3c0e2 #bcc5e2 #c0ccea;
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, #f6f8fa, white);
+  background-image: -moz-linear-gradient(top, #f6f8fa, white);
+  background-image: -o-linear-gradient(top, #f6f8fa, white);
+  background-image: linear-gradient(to bottom, #f6f8fa, white);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
 }
+
+.checkout-input:focus {
+  border-color: #46aefe;
+  outline: none;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px #46aefe;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px #46aefe;
+}
+
+
+/*INPUT*/
 
 h1
 {
@@ -84,6 +97,63 @@ button
 	text-shadow: #7B7D82 1px 1px 1px;
 	width: 75px;
 }
+
+/*select*/
+select
+{
+	padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    width:108%;
+    height:35px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+label {position:relative}
+label:after {
+    content:'<>';
+    font:11px "Consolas", monospace;
+    color:#aaa;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:2px;
+    padding:0 0 2px;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    
+}
+label:before {
+    content:'';
+    right:6px; top:0px;
+    width:20px; height:20px;
+    background:#f8f8f8;
+    position:absolute;
+    
+    display:block;
+}
+/*select*/
+
+/*componentes en la pagina*/
+
 
 /*sobre-escribir kendo ui css*/
 .km-android,.km-android .km-content
@@ -119,7 +189,7 @@ button
 }
 
 
-
+/*listado pestaña 3*/
 #todoItems
 {
 	border-radius: 5px;
@@ -159,42 +229,6 @@ button
     background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.2) 100%); /* W3C */
 }
 
-.footer
-{
-	width: 100%;
-	height: 31px;
-	position: fixed;
-	bottom: 0px;
-	margin: 0 auto;
-	background-image: url("../img/fondoPiePagina.png");
-	background-repeat: repeat-x;
-}
-
-.footer:before
-{
-	content: url(img/logo.png);
-	position: relative;
-	top: 2px;
-	left: 12px;
-}
-
-.footer img
-{
-	height: 19px;
-	width: 83px;
-	float: left;
-	padding-left: 12px;
-	padding-top: 3px;
-}
-
-.footer div
-{
-	float: right;
-	color: #FFFFFF;
-	padding-right: 12px;
-	padding-top: 2px;
-}
-
 .list-label 
 {
     color:#639ecd;
@@ -229,21 +263,21 @@ button
     margin-left:5px;
 }
 .todo-delete {
-    width: 12px;
+    float: left;
+    width: 10px;
 	height: 3px;
 	background: #fff;
-    text-align:center;
+    text-align:left;
     margin-left: 6px;
     margin-top: 11px;
 }
 
-/*lista de puntos*/
 .product_overview
 {
 	clear: both;
 	margin-top: 15px;
 	border-bottom: 1px solid gray;
-	height: 95px;
+	height: 115px;
 }
 
 .product_overview img
@@ -262,15 +296,16 @@ button
 
 .product_overview .title { font-weight: bold;}
 .product_overview a {  }
+/*listado pestaña 3*/
+
 
 /*tablas*/
-
 .tabla {
     display: table;
     width: auto;
     overflow:hidden;
     border-collapse: collapse;
-    height: 600px;
+    height: 450px;
 }
 .fila {
     display: table-row;
@@ -279,16 +314,17 @@ button
 }
 .celdaIzq {
     display: table-cell;
-    width: 50%;
+    width: 49%;
     
     font-family: Segoe UI;
 	font-size: 10pt;
 }
 .celdaDer {
     display: table-cell;
-    width: 49%;
+    width: 50%;
     
     font-family: Segoe UI;
 	font-size: 10pt;
     text-align:center;
 }
+/*tablas*/

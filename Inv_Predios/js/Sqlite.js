@@ -77,7 +77,7 @@ app.refresh = function() {
         "<div class='title'>" + 
         "Barrio: " + row.barrio  + 
         "<br/>Dir: " + row.direccion  + 
-         "<br/>Coor: " + row.coordinador  + 
+        "<br/>Coor: " + row.coordinador  + 
         "<br/>Lon: " + row.longitud +          
         "<br/>Lat: " + row.latitud + "" +
         "<a class='button delete' href='javascript:void(0);'  onclick='app.deleteTodo(" + row.ID + ");'>"+

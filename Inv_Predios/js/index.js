@@ -1,6 +1,13 @@
 document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("backbutton", onBackKeyDown, false);
 
-function onDeviceReady() {
+function onBackKeyDown() {
+    navigator.app.exitApp();
+}
+
+function onDeviceReady() {    
+    //kendo UI
+    app.application = new kendo.mobile.Application(document.body, { layout: "tabstrip-layout" });    
 	//gps
     geolocationApp = new geolocationApp();
 	geolocationApp.run();
